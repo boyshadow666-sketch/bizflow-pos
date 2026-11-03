@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="BizFlow - Aplikasi Kelola Order, Stok & Harga Member (Sistem Kasir POS & Inventaris PRO)">
+  <meta name="application-name" content="BizFlow POS">
+
+  <title>BizFlow - Aplikasi Kelola Order, Stok &amp; Harga Member</title>
+
+  <!-- Favicon SVG Inline (Ikon Kasir BizFlow) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='8' fill='%232563eb'/%3E%3Cpath fill='%23ffffff' d='M10 11h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2v4a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2v-4h-2a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zm4 10v4h8v-4h-8zm-2-6v2h12v-2H12z'/%3E%3C/svg%3E">
+
+  <!-- Koneksi Awal Google Fonts & Material Symbols (Sesuai app.config.js & DESIGN.md) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+  <!-- Berkas 3 dari 5: Styling Utama & Cetak -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Peringatan jika JavaScript dinonaktifkan di browser -->
+  <noscript>
+    <div style="max-width:520px;margin:15vh auto;padding:24px;font-family:system-ui,sans-serif;border:1px solid #fecaca;background:#fee2e2;color:#991b1b;border-radius:12px;text-align:center;">
+      <h2 style="margin:0 0 8px;">JavaScript Diperlukan</h2>
+      <p style="margin:0;">Aktifkan JavaScript pada browser Anda untuk menjalankan aplikasi BizFlow POS &amp; Inventory.</p>
+    </div>
+  </noscript>
+
+  <!-- Wadah Utama Aplikasi (Di-render otomatis oleh components.js) -->
+  <div id="app">
+    <div class="empty" style="min-height:100vh;">
+      <div class="empty__icon">
+        <span class="material-symbols-outlined icon-xl" aria-hidden="true">point_of_sale</span>
+      </div>
+      <div class="empty__title">Memuat BizFlow POS...</div>
+      <p class="empty__text">Menyiapkan ruang kerja kasir, stok produk, dan harga member.</p>
+    </div>
+  </div>
+
+  <!-- Wadah Dialog Modal & Notifikasi Toast (Digunakan oleh components.js) -->
+  <div id="modal-host"></div>
+  <div id="toast-host" class="toast-host" aria-live="polite"></div>
+
+  <!-- =====================================================================
+       URUTAN MUAT SKRIP WAJIB (Sesuai Kontrak Arsitektur Multi-Berkas):
+       1. app.config.js  -> Konfigurasi & Parameter (window.BIZFLOW_CONFIG)
+       2. core.js        -> Otak Aplikasi / Core Logic (window.BizFlowCore)
+       3. components.js  -> Komponen UI & Interaksi (window.BizFlowUI)
+       ===================================================================== -->
+  <script src="app.config.js"></script>
+  <script src="core.js"></script>
+  <script src="components.js"></script>
+</body>
+</html>
